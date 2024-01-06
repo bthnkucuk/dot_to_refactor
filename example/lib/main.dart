@@ -1,3 +1,6 @@
+import 'package:example/number.dart';
+import 'package:example/string.dart';
+import 'package:example/widgets.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -101,7 +104,16 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
-            ),
+            )
+                .padding(const EdgeInsets.all(160.0))
+                .colored(Colors.red)
+                .opacity(0.2)
+                .rotated(360),
+            'https://plus.unsplash.com/premium_photo-1681223965635-bdb526bc4989?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                .toNetworkImage(),
+            10.toSizedHeight(),
+            20.2.toSizedWidth(),
+            "some text".toText().colored(Colors.red),
           ],
         ),
       ),
